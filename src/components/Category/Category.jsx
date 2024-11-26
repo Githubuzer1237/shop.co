@@ -11,7 +11,7 @@ const Category = (  ) => {
   <Title orient="center">hdhf</Title>
      <div className={s.wrapper}>
    {
-      Products.map(card => (
+      Products.slice(0, 4).map(card => (
         <CategoryCard key={card.id}  image={card.image} name={card.name}  price={card.price} /> 
       ))
    }
