@@ -1,6 +1,7 @@
 .footer{
     background-color: #F0F0F0;
     padding: 70px;
+    margin-top: 20px;
 }
 
 .wrapper{
@@ -12,8 +13,8 @@
     p{
         opacity: 50%;
     }
-    @media (max-width: 1100px) {
-        grid-template-columns: 1fr 1fr;
+    @media (max-width:700px) {
+        grid-template-columns: repeat(2, 2fr);
     }
     @media (max-width:500px) {
         grid-template-columns: 1fr;

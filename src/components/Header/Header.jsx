@@ -3,10 +3,10 @@ import s from './Header.module.scss';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false)
   const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
+    setIsActive(!isActive)
+  }
 
   const closeMenu = () => {
     setIsActive(false)
@@ -16,17 +16,12 @@ const Header = () => {
       <header className={s.header}>
         <div className="container">
           <nav className={s.nav}>
-            <img
-              className={s.burger}
-              onClick={toggleMenu}
-              src="/burger-img.svg"
-              alt=""
-            />
-            <Link to={'/'} className={s.logo}>
+            <img className={s.burger} onClick={toggleMenu} src="/burger-img.svg" alt="" />
+            <Link onClick={closeMenu} to={'/'} className={s.logo}>
               SHOP.CO
             </Link>
             <div className={`${s.menu} ${isActive ? s.active : null}`}>
-              <Link onClick={closeMenu} to={'/shop'} className={s.dropdown}  >
+              <Link onClick={closeMenu} to={'/shop'} className={s.dropdown}>
                 Shop
                 <svg
                   width="16"
@@ -40,28 +35,23 @@ const Header = () => {
                     fill="black"
                   />
                 </svg>
-
-                <div >
-                  <Link  to={'/'}>Casual</Link>
-                  <Link  to={'/'}>Formal</Link>
-                  <Link  to={'/'}>Party</Link>
-                  <Link  to={'/'}>Gym</Link>
-
+                <div>
+                  <Link to={'/'}>Casual</Link>
+                  <Link to={'/'}>Party</Link>
+                  <Link to={'/'}>Formal</Link>
+                  <Link to={'/'}>GYM</Link>
                 </div>
-              </Link>
-              <Link  onClick={closeMenu} to={'/'}>On Sale</Link>
-              <Link  onClick={closeMenu} to={'/'}>New Arrivals</Link>
-              <Link  onClick={closeMenu} to={'/'}>Brands</Link>
+                </Link>
+              <Link onClick={closeMenu} to={'/'}>On Sale</Link>
+              <Link onClick={closeMenu} to={'/'}>New Arrivals</Link>
+              <Link onClick={closeMenu} to={'/'}>Brands</Link>
             </div>
-            <input
-              placeholder="Search for products..."
-              className={s.search}
-              type="text"
-            />
+            <input placeholder='Search for products...' className={s.search} type="text" />
             <div className={s.box}>
               <img src="/icon-1.svg" alt="" />
               <img src="/icon-2.svg" alt="" />
             </div>
+
           </nav>
         </div>
       </header>
