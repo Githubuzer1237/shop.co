@@ -13,10 +13,11 @@ const Category = () => {
             <SectionTitle orient='center'>NEW ARRIVALS</SectionTitle>
 
             <div className={s.wrapper}>
-            {Products.slice(0, 4).map(card => (
-              <Link to={`/product/${card.id}`}>
+                {Products.slice(0, 4).map(card => (
+                  <Link to={`/product/${card.id}`} >
+                  
                     <Card key={card.id} image={card.image} name={card.name} price={card.price}/>
-              </Link>
+                  </Link>
                 ))}
                 
                 
