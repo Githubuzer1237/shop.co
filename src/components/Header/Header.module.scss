@@ -1,11 +1,11 @@
-
 .nav{
     display: flex;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 40px;
+    
 }
 
 .logo{
@@ -78,21 +78,23 @@
     }
 }
 
+
 .dropdown{
     position: relative;
     display: flex;
     align-items: center;
     gap: 4px;
-
     &:hover{
         div{
             opacity: 1;
             visibility: visible;
         }
-
         svg{
-            rotate: 180deg;
+            rotate: -180deg;
         }
+    }
+    svg{
+        transition: 0.5s;
     }
 
     div{
@@ -100,25 +102,24 @@
         right: 0;
         position: absolute;
         background-color: #f0f0f0;
-        padding: 0px 0px;
+        padding:  0px;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.267);
+        // gap: 10px;
         border-radius: 6px;
-
-        transition: 0.3s;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.484);
+        transition: 0.5s;
         opacity: 0;
         visibility: hidden;
         overflow: hidden;
         a{
             padding: 4px 10px;
-            transition: 0.4s;
-
+            transition: 0.5s;
             &:hover{
                 background-color: lightgray;
+
             }
 
         }
-
     }
 }

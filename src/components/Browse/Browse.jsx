@@ -1,33 +1,28 @@
 import React from 'react'
 import s from './Browse.module.scss'
-import Title from '../Title/Title'
+import SectionTitle from '../SectionTitle/SectionTitle'
 
 const Browse = () => {
   return (
-   <>
-   <div className={s.wrapper}>
-    <div className="container">
-        <div className={s.box}>
-            <Title >BROWSE BY dress STYLE</Title>
-            <div className={s.cards}>
-                <div className={s.card1}>
-                    <h2  className={s.title}>Casual</h2>
-                </div>
-                <div className={s.card2}>
-                    <h2  className={s.title}>Casual</h2>
-                </div>
-                <div className={s.card3}>
-                    <h2  className={s.title}>Casual</h2>
-                </div>
-                <div className={s.card4}>
-                    <h2  className={s.title}>Casual</h2>
+    <>
+    <section className={s.browse}>
+        <div className="container">
+            <div className={s.wrapper}>
+                <SectionTitle>BROWSE BY dress STYLE</SectionTitle>
+                <div className={s.cards}>
+                    <div className={s.box_1}>
+                    <div className={s.card_1}><b>Casual</b></div>
+                    <div className={s.card_2}><b>Formal</b></div>
+                    </div>
+                   <div className={s.box_2}>
+                   <div className={s.card_3}><b>Party</b></div>
+                   <div className={s.card_4}><b>Gym</b></div>
+                   </div>
                 </div>
             </div>
         </div>
-    </div>
-   </div>
-   
-   </>
+    </section>
+    </>
   )
 }
 

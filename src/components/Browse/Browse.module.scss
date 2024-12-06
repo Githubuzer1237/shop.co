@@ -1,67 +1,59 @@
-.title {
-    color: black;
-    margin-top: 20px;
-    margin-left: 10px;
-}
-
-.box{
-    padding-bottom: 80px;
+.wrapper{
     border-radius: 20px;
-    background-color: rgba(128, 128, 128, 0.455);
-}
-
-.cards {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    grid-template-areas:
-        "card-1 card-2 card-2"
-        "card-3 card-3 card-4";
-
-
-    div {
-        min-height: 290px;
-        border-radius: 20px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+    gap: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
    
-    }
-
-
-    .card1 {
-        grid-area: card-1;
-        background-image: url(/card1.png);
-        margin-left: 20px;
-    }
-
-    .card2 {
-        grid-area: card-2;
-        background-image: url(/card2.png);
-        margin-right: 20px;
-    }
-
-    .card3 {
-        grid-area: card-3;
-        background-image: url(/card3.png);
-        margin-left: 20px;
-
-    }
-
-    .card4 {
-        grid-area: card-4;
-        background-image: url(/card4.png);
-        margin-right: 20px;
-
-    }
 }
 
-.card {
-    background-image: url(/card1.png);
+.cards{
+    div{
+        min-height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        b{
+            font-weight: 700;
+            font-size: clamp(1rem, 0.545rem + 2.27vw, 2.25rem);
+        }
+        display: grid;
+    @media (max-width:700px) {
+        grid-template-columns: 1fr;
+    }
+    }  
+ 
+}
 
+.box_1{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+}
 
-    border-radius: 20px;
+.box_2{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    padding-top: 20px;
+}
 
-
+.card_1{
+    background-image: url(/public/browse-img1.png);
+    padding: 20px;
+}
+.card_2{
+    background-image: url(/public/browse-img2.png);
+    padding: 20px;
+}
+.card_3{
+    background-image: url(/public/browes-img3.png);
+    padding: 20px;
+}
+.card_4{
+    background-image: url(/public/browse-img4.png);
+    padding: 20px;
 }
